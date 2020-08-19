@@ -1,6 +1,6 @@
 const eqArrays = function(arr1, arr2) {
   let returnVal = true;
-  if(arr1 && arr2){
+  if (arr1 && arr2) {
     if (arr1.length === arr2.length) {
       for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] === arr2[i]) {
@@ -14,8 +14,7 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
     return returnVal;
- }
- 
+  }
   return false;
 };
 const assertArraysEqual = function(actual, expected) {
@@ -28,9 +27,8 @@ const assertArraysEqual = function(actual, expected) {
 const letterPositions = function(sentence) {
   const result = {};
   let index = 0;
-  const noSpaces = sentence.split(" ").join("");
-  for (const char of sentence){
-    if(char !== ' '){
+  for (const char of sentence) {
+    if (char !== ' ') {
       if (result[char]) {
         result[char].push(index);
       } else {
@@ -46,7 +44,7 @@ const letterPositions = function(sentence) {
 /*
 console.log(letterPositions('LHL'));
 console.log(letterPositions('Hello World'));
-console.log(letterPositions("lighthouse in the house")); 
+console.log(letterPositions("lighthouse in the house"));
 */
 // assertion tests
 const test = letterPositions("lighthouse in the house");
