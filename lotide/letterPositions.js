@@ -50,5 +50,5 @@ console.log(letterPositions("lighthouse in the house"));
 */
 // assertion tests
 const test = letterPositions("lighthouse in the house");
-console.log( test["l"]);
-assertArraysEqual(test["I"],[3, 5, 15, 18]);
+assertArraysEqual(test["h"],[3, 5, 15, 18]);
+assertArraysEqual(letterPositions("hello").e, [1]);
