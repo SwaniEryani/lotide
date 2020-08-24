@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const countOnly = require('../countOnly');
+const _ = require('../index');
 
 describe("#countOnly", () => {
   const firstNames = [
@@ -13,7 +13,7 @@ describe("#countOnly", () => {
     "Fang",
     "Joe"
   ];
-  const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true })
+  const result1 = _.countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true })
   it("should returns 1 for [\"Jason\"]", () => {
     assert.deepEqual(result1["Jason"], 1);
   });
@@ -24,7 +24,3 @@ describe("#countOnly", () => {
     assert.deepEqual(result1["Fang"], 2); 
   });
 });
-// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
-// assertEqual(result1["Jason"], 1);
-// assertEqual(result1["Karima"], undefined);
-// assertEqual(result1["Fang"], 2);

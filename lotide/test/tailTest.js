@@ -1,14 +1,14 @@
-const tail = require('../tail');
+const _ = require('../index');
 const assert = require('chai').assert;
 
-describe("#head", () => {
+describe("#tail", () => {
   it("returns 1 for [1, 2, 3]", () => {
-    assert.deepEqual(tail([1, 2, 3]), [2,3]);
+    assert.deepEqual(_.tail([1, 2, 3]), [2,3]);
   });
   it("returns '5' for ['5']", () => {
-    assert.deepEqual(tail(['5']), []); 
+    assert.deepEqual(_.tail(['5']), []); 
   });
   it("returns undefined for []", () => {
-    assert.deepEqual(tail([]), []); 
+    assert.deepEqual(_.tail([]), []); 
   });
 });
